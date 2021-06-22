@@ -90,7 +90,7 @@ const News = () => {
                                             })}
                                         </div>
 
-                                        {blogs && <LoadMore />}
+                                        {blogs.length > 0 && <LoadMore />}
                                     </div>
 
                                     <div className="col-xl-4 col-lg-4 col-md-4 col-sm-12">

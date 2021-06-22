@@ -14,6 +14,7 @@ class UserProvider extends Component {
         teams :[],
         services:[],
         blogs:[],
+        oldBlogValue:[],
         searchBlog:[],
         comments:[],
         popularBlog:[],
@@ -41,7 +42,7 @@ class UserProvider extends Component {
         fetchSetting().then((settings) => {if(settings && settings.status) this.setState({settings:settings.data[0]})})
         fetchService().then((services) =>{if(services && services.status) this.setState({services:services.data})})
         fetchBlogs({offset:0, limit:10}).then((blogs) => {
-          if(blogs && blogs.status)this.setState({blogs:blogs.data})
+          if(blogs && blogs.status)this.setState({blogs:blogs.data, oldBlogValue:blogs.data})
           this.setState({loading:false})
         })
         // console.log("data", data)

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 
 import WidgetSearch from '../widget/WidgetSearch';
-import WidgetCategories from '../widget/WidgetCategories';
+// import WidgetCategories from '../widget/WidgetCategories';
 import WidgetRecentEntries from '../widget/WidgetRecentEntries'
 import UserContext from '../../context';
 import { fetchPopularBlog } from '../../services';
@@ -24,7 +24,7 @@ const Widget = () => {
         <aside id="aside" className="widget-area">
             <WidgetSearch />
 
-            <WidgetCategories />
+            {/* <WidgetCategories /> */}
 
             <WidgetRecentEntries />
 
