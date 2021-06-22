@@ -1,0 +1,60 @@
+//=================================================
+// Back
+//=================================================
+
+$back_to_top_width: 3.421rem;
+$back_to_top_height: 3.421rem;
+
+#back-to-top {
+	position: absolute;
+	top: -$back_to_top_height + -$space_lg;
+	z-index: 1039;
+	right: $wrapper_p_r;
+
+	@media #{$media_xxl} {
+		right: $wrapper_p_r_xxl;
+	}
+
+	@media #{$media_xl} {
+		right: $wrapper_p_r_xl;
+	}
+
+	@media #{$media_md} {
+		top: -$back_to_top_height / 2;
+	}
+
+	@media #{$media_sm} {
+		right: $wrapper_p_r_sm;
+	}
+
+	a {
+		display: block;
+		width: $back_to_top_width;
+		height: $back_to_top_height;
+		color: $back_to_top_color;
+		background: $back_to_top_background_color;
+
+		[class*='fa-'], span, i {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+		}
+
+		[class*='malex-icon'] {
+			font-size: 1rem;
+		}
+
+		span {
+			@extend .bold;
+			font-size: $f_size_sm;
+		}
+
+		&:hover {
+			color: $back_to_top_hover_color;
+			background: $back_to_top_hover_background_color;
+			border-color: $back_to_top_hover_color;
+			opacity: 1;
+		}
+	}
+}

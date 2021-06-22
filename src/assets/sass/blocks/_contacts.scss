@@ -1,0 +1,24 @@
+//=================================================
+// Contacts
+//=================================================
+
+.contact-form-shortcode {
+	[class*='-form'] {
+		@media #{$media_md} {
+			.input-group {
+				.gutter-width {
+					width: 100%;
+
+					&:first-child {
+						padding-right: 0;
+						margin-bottom: $space_xs;
+					}
+
+					&:last-child {
+						padding-left: 0;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,69 @@
+//=================================================
+// Fun fact
+//=================================================
+
+.fun-fact {
+	@extend .style-default;
+	text-align: center;
+	padding: $space_md 0;
+
+	.fun-fact-t-head {
+		font-family: $font_primary_bold;
+		font-size: $h2_font_size;
+		font-weight: 700;
+		line-height: 1.44;
+		@include lhCrop-b(1.44, 0.75);
+
+		&:last-child {
+			margin-bottom: 0;
+			@include lhCrop-a(1.44, 0.70);
+		}
+	}
+}
+
+.fun-facts-width-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.fun-fact-items {
+	[class*='col-'] {
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			border-left: 1px solid rgba(255, 255, 255, 0.15);
+		}
+
+		&:first-child {
+			&:before {
+				display: none;
+			}
+		}
+
+		&[class*='-md-12'] {
+			@media #{$media_lg} {
+				&:before {
+					border-color: transparent;
+				}
+			}
+		}
+
+		&[class*='-sm-12'] {
+			@media #{$media_md} {
+				&:before {
+					border-color: transparent;
+				}
+			}
+		}
+
+		@media #{$media_sm} {
+			&:before {
+				border-color: transparent;
+			}
+		}
+	}
+}

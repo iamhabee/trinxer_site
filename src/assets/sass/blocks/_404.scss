@@ -1,0 +1,33 @@
+//=================================================
+// 404
+//=================================================
+
+.error404 {
+    #page-content {
+        .content {
+            .text {
+                max-width: 930px;
+                padding-right: 150px;
+                margin-bottom: 0;
+
+                @media #{$media_md} {
+                    padding-right: 0;
+                }
+            }
+
+            .form {
+                max-width: 930px;
+                padding-right: 150px;
+                padding-top: $space_lg;
+
+                @media #{$media_md} {
+                    padding-right: 0;
+                }
+            }
+
+            .button {
+                padding-top: $space_lg;
+            }
+        }
+    }
+}

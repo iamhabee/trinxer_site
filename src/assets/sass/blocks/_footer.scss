@@ -1,0 +1,79 @@
+//=================================================
+// Footer
+//=================================================
+
+.site-footer {
+    position: relative;
+    font-size: $f_size_df;
+    background-color: $footer_background_color;
+
+    // Color
+    color: $footer_color;
+
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+    del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+    ol, ul, li, fieldset, legend, label, span, caption, figcaption, details, hgroup, summary, mark, audio, video {
+        &:not(.btn) {
+            color: inherit;
+        }
+    }
+
+    a {
+        &:not(.transform-scale-h):not(.btn) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+
+    p {
+        font-size: $f_size_df;
+    }
+
+    .wrapper {
+        position: relative;
+
+        .footer {
+            border-top: 1px solid $body_border_color;
+            padding-top: $footer_padding_t;
+            padding-bottom: $footer_padding_b;
+
+            .d-flex {
+                > div {
+                    padding-left: $space_xs;
+                    padding-right: $space_xs;
+
+                    &:first-child {
+                        padding-left: 0;
+                    }
+
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    @media #{$media_md} {
+                        padding-left: 0;
+                        padding-right: 0;
+                        margin-bottom: $space_xs;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .copyright {
+                @media #{$media_md} {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.footer-no-border {
+    position: relative;
+    z-index: 2;
+    margin-bottom: -1px;
+}

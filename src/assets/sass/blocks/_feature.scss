@@ -1,0 +1,9 @@
+//=================================================
+// Feature
+//=================================================
+
+.feature-item {
+	@extend .style-default;
+	padding-top: $space_lg;
+	border-top: 1px solid $body_border_color;
+}

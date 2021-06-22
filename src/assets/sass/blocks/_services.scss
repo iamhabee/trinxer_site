@@ -1,0 +1,63 @@
+//=================================================
+// Services
+//=================================================
+
+.accordion-services {
+	margin-bottom: -$space_xs;
+
+	.card {
+		margin-bottom: $space_xs;
+
+		.card-header {
+			.btn {
+				&.collapsed {
+					[class*='fas'] {
+						color: $accordion_color;
+					}
+				}
+
+				[class*='fas'] {
+					@extend .transition-all;
+					color: $accordion_active_color;
+				}
+
+				&:hover {
+					[class*='fas'] {
+						color: $accordion_hover_color;
+					}
+				}
+			}
+
+			.btn-link {
+				width: 100%;
+				text-align: left;
+
+				[class*='fa-'] {
+					position: absolute;
+					top: 50%;
+					right: 3px;
+					@include transform(translateY(-50%));
+				}
+
+				[class*='fa-'] {
+					@include transform(translateY(-50%) rotate(90deg));
+				}
+
+				&.collapsed {
+					[class*='fa-'] {
+						@include transform(translateY(-50%) rotate(0));
+					}
+				}
+			}
+		}
+
+		.card-body {
+			.card-price {
+				font-family: $font_primary_bold;
+				font-weight: 700;
+				font-size: $f_size_df;
+				color: $body_main_element_primary_color;
+			}
+		}
+	}
+}

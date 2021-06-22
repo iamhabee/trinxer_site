@@ -1,0 +1,215 @@
+//=================================================
+// Modal
+//=================================================
+
+.modal {
+	background-color: $modal_background_color;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left top;
+	min-width: 320px;
+
+	.modal-dialog {
+		.modal-header {
+			border-bottom: 0;
+
+			.close {
+				&.btn {
+					padding: 0.75rem;
+					margin: 0 -0.75rem 0 auto;
+					font-size: 1.263rem;
+				}
+			}
+		}
+
+		.modal-content {
+			.modal-text {
+				color: $modal_content_color;
+
+				a {
+					&:not(.btn) {
+						color: $body_links_color;
+
+						&:hover {
+							color: $body_links_hover_color;
+						}
+					}
+				}
+
+				p {
+					margin-bottom: $space_pc_primary - $p_font_mb;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			// Color
+			color: $modal_content_color;
+
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+			del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+			ol, ul, li, fieldset, legend, label, span, caption, figcaption, details, hgroup, summary, mark, audio, video {
+				color: inherit;
+			}
+
+			.close {
+				span {
+					color: $modal_content_color;
+				}
+			}
+		}
+
+		.modal-footer {
+			.modal-text {
+				font-size: $f_size_df;
+
+				p {
+					font-size: $f_size_df;
+				}
+			}
+		}
+	}
+}
+
+.logged-in {
+	&.admin-bar {
+		.modal {
+			padding-top: 32px;
+
+			@media #{$media_lg} {
+				padding-top: 46px;
+			}
+		}
+	}
+}
+
+/*=============================
+// Modal size
+=============================*/
+.modal-full {
+	max-width: 100%;
+	margin: 0;
+}
+
+/*=============================
+// Modal header
+=============================*/
+.modal-header-top {
+	position: absolute;
+	z-index: 99;
+	width: 100%;
+}
+
+/*=============================
+// Modal body
+=============================*/
+.modal-body-centered {
+	display: flex;
+	align-items: center;
+	min-height: 100%;
+	padding: 0;
+
+	&::before {
+		content: "";
+		display: block;
+		height: 100vh;
+	}
+}
+
+/*=============================
+// Modal title
+=============================*/
+.modal-title {
+	margin-bottom: 0 !important;
+	@extend .after;
+}
+
+/*=============================
+// Modal menu
+=============================*/
+#menu-modal {
+
+	.modal-body {
+		> * {
+			padding-top: 7.895rem;
+			padding-bottom: 7.895rem - $header_padding_b;
+			padding-right: 8.5%;
+
+			@media #{$media_md} {
+				padding-bottom: 0;
+			}
+		}
+
+		.modal-text {
+			padding-top: 1.053rem;
+			padding-bottom: 1.053rem;
+
+			@media #{$media_md} {
+				padding-top: 2.105rem;
+			}
+		}
+	}
+
+	.modal-footer {
+		position: absolute;
+		bottom: $header_padding_b;
+		width: 100%;
+		padding-top: 2.105rem;
+
+		@media #{$media_md} {
+			position: relative;
+			bottom: 0;
+			padding-bottom: $header_padding_b;
+		}
+
+		.modal-text {
+			@media #{$media_md} {
+				margin-bottom: $header_padding_b;
+			}
+		}
+
+		> * {
+			margin: 0;
+		}
+	}
+}
+
+/*=============================
+// Modal search
+=============================*/
+#search-modal {
+	.modal-body {
+		min-height: 320px;
+
+		form {
+			width: 100%;
+			max-width: 1250px;
+			padding-left: 5.263rem;
+			padding-right: 5.263rem;
+			margin: auto;
+
+			@media #{$media_md} {
+				padding-left: 2.632rem;
+				padding-right: 2.632rem;
+			}
+		}
+	}
+
+	.modal-footer {
+		position: absolute;
+		bottom: $header_padding_b;
+		width: 100%;
+
+		.modal-text {
+			@media #{$media_md} {
+				margin-bottom: $header_padding_b;
+			}
+		}
+
+		> * {
+			margin: 0;
+		}
+	}
+}

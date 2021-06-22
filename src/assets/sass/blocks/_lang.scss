@@ -1,0 +1,53 @@
+//=================================================
+// Languages
+//=================================================
+
+$lang_item_space: $space_md / 2;
+
+.languages {
+    .nav {
+        @extend .flex-nowrap;
+        font-size: $f_size_df;
+        margin-bottom: -$lang_item_space;
+
+        .lang-item {
+            margin-right: $lang_item_space;
+            margin-bottom: $lang_item_space;
+            line-height: 0.7;
+
+            @media #{$media_xxl} {
+                margin-right: $lang_item_space / 1.5;
+            }
+
+            &:before, &:after {
+                display: none;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            a {
+                font-family: $font_primary_bold;
+                font-weight: 700;
+                color: $menu_links_color;
+                text-transform: uppercase;
+            }
+
+            &:hover {
+                a {
+                    color: $menu_links_hover_color;
+                    opacity: 0.7;
+                }
+            }
+
+            &.active, &.current-lang {
+                a {
+                    cursor: not-allowed;
+                    color: $menu_links_active_color;
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}

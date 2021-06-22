@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "author": "Tommy Andersen",
+        "link": "/news-single-post#comments",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit…"
+    },
+    {
+        "id": "2",
+        "author": "Rosie Ford",
+        "link": "/news-single-post#comments",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit…"
+    },
+    {
+        "id": "3",
+        "author": "Arthur Hopin",
+        "link": "/news-single-post#comments",
+        "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit…"
+    }
+]

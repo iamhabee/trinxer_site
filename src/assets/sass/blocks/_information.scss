@@ -1,0 +1,149 @@
+//=================================================
+// Information
+//=================================================
+
+.information {
+	@extend .style-default;
+	@extend .transition-all;
+	position: relative;
+	padding: $space_lg $space_md;
+	background-color: $white;
+	height: 100%;
+
+	.information-icon {
+		border-bottom: 1px solid $body_border_color;
+		padding-bottom: $space_xs;
+		margin-bottom: $space_xs;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		> * {
+			font-size: 3.158rem;
+			color: $body_main_element_secondary_color;
+		}
+	}
+
+	.information-t-head {
+		color: $body_headline_color;
+	}
+
+	.information-btn {
+		margin-top: $space_xs;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.information-items {
+	margin-top: -10.526rem !important;
+}
+
+.with-information-items {
+	padding-bottom: 10.526rem;
+}
+
+// Colors
+.information-color-1 {
+	background-color: #e3752b;
+	color: $body_text_tertiary_color;
+
+	.information-icon {
+		border-color: rgba($body_text_tertiary_color, 0.15);
+
+		> * {
+			color: inherit;
+		}
+	}
+
+	.information-t-head {
+		color: inherit;
+	}
+
+	.information-description {
+		color: inherit;
+	}
+
+	.information-btn {
+		> * {
+			transition: opacity $transition-s ease-in-out;
+			color: inherit;
+
+			&:hover {
+				color: inherit;
+				opacity: 0.7;
+			}
+
+			&.btn-line {
+				&:after {
+					background-color: $body_text_tertiary_color;
+				}
+			}
+		}
+	}
+}
+
+.information-color-2 {
+	background-color: $body_main_element_primary_color;
+	color: $body_text_tertiary_color;
+
+	.information-icon {
+		border-color: rgba($body_text_tertiary_color, 0.15);
+
+		> * {
+			color: inherit;
+		}
+	}
+
+	.information-t-head {
+		color: inherit;
+	}
+
+	.information-description {
+		color: inherit;
+	}
+
+	.information-btn {
+		> * {
+			transition: opacity $transition-s ease-in-out;
+			color: inherit;
+
+			&:hover {
+				color: inherit;
+				opacity: 0.7;
+			}
+
+			&.btn-line {
+				&:after {
+					background-color: $body_text_tertiary_color;
+				}
+			}
+		}
+	}
+}
+
+.information-color-3 {
+	background-color: #f8f8f8;
+}
+
+.information-icon-margin {
+	.information-icon {
+		> * {
+			margin-left: -0.526rem;
+		}
+	}
+}
+
+// Page builder
+[class*='-element'] {
+	&[class*='-information'] {
+		height: 100%;
+
+		> [class*='-widget-container'] {
+			height: 100%;
+		}
+	}
+}

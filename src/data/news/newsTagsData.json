@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "Dental",
+        "link": "/news"
+    },
+    {
+        "id": "2",
+        "title": "Doctors",
+        "link": "/news"
+    },
+    {
+        "id": "3",
+        "title": "Health",
+        "link": "/news"
+    }
+]
